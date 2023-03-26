@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Child Nutrition </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    
+<!-- Navbar-->
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="data:image/jpeg;base64,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ph6lPIgcgqotnuyXyA2PC/zngGr2VPN2ti75wMxdR3sikgZioNrkC/DlKKnvViRxKHzUfQidP+r6/u0/g37yy1en/wCz8u9+Xl4YQ4kXVcV6lKiqhle5JLMwtkuEzNlvqSrWI1sRPfF7NesQ5vTZqTI+oIvfQEcGUgt8uBmdqb04k8GRfJR9byHX2xXf2qzehyj/AC2lJa2hb/J7dFt4e/z8BxI2dVKdPvYiol2pKlRTazZdb24ni3LnKirvHRogjD0ySeLG9jyHHvHyNpmKNFnNkVmbwBJ+Uvdn7qVX1qkUx00LfLQf1pKLVV6z/wCGCXff4vHiLt7FXjdoVsQwDszXPdRRpfwA5/OaDYm6/B8QPKny/vdfL/iXuzdl0qA+zXXmx1Y+v0GksJrof0+0uOs+KXw/PyJUep4tPMRPTLCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCQsVsyjU9umpPW1m+I1k2JEoqSs8oFDV3Tw54Z18m/wDoGcDudS/8lT/L+00sTO9HQf8AgvIiyM4m6FEcXqn1H0EmUN3sMn9mD5kn5E2lvEtHS0Yu6gvIWRzpUlUWVQo6AAD5TpETuiRERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAP/Z" width="70" height="70">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Recipes
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="cut.html">Veg Cutlet</a></li>
+            <li><a class="dropdown-item" href="ragi.html">Ragi Uttapam</a></li>
+            <li><a class="dropdown-item" href="french.html">French Toast</a></li>
+            <li><a class="dropdown-item" href="banana.html">Banana & Nut Pancake</a></li>
+            <li><a class="dropdown-item" href="multi.html">Multigrain vegetable Cheela</a></li>
+            <li><a class="dropdown-item" href="chicken.html">Chicken Coleslaw Sandwich</a></li>
+            <li><a class="dropdown-item" href="egg.html">Egg Wrap</a></li>
+            <li><a class="dropdown-item" href="mini.html">Mini Vegetable Idli</a></li>
+            <li><a class="dropdown-item" href="vermi.html">Vermicelli Upma</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        
+
+    <button class="btn btn-sm" data-bs-target="#modal22"data-bs-toggle="modal">Login</button>
+    
+    <div class="modal"id="modal22">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="text-warning">Login</h2>
+                <button class="btn-close"data-bs-dismiss="modal"></button>
+                </div>
+                 <div class="modal-body">
+                    <form>
+                       <div class="form-floating">
+                            <input type="text" name="name" id="name"placeholder="Enter your name"class="form-control">
+                            <label for="name">Enter your name</label><br>
+                        </div>
+                        <div class="form-floating">
+                           <input type="text" name="email" id="email"placeholder="Enter email"class="form-control">
+                           <label for="email">Enter your email address</label><br>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" name="pwd" id="pwd"placeholder="enter password"class="form-control">
+                            <label for="pwd">Enter your password</label><br>
+                        </div>
+                        <input type="button" value="Login" class="btn btn-success">
+                        <input type="button" value="New" class="btn btn-primary">
+
+
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+      
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Navbar-->
+
+<!-- Slides -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://previews.123rf.com/images/nataliaderiabina/nataliaderiabina1807/nataliaderiabina180700012/104907079-healthy-child-nutrition-food-background-top-view-baby-8-months-old-surrounded-with-different.jpg" width="100%" height="400"  alt="">
+      <div class="carousel-caption d-none d-md-block">
+        <p>“The doctor of the future will no longer treat the human 
+            frame with drugs, but rather will cure and prevent disease with nutrition.”</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://media.istockphoto.com/id/601376594/photo/kid-girl-eating-healthy-vegetables.jpg?s=612x612&w=0&k=20&c=AZwLLHnph8chkwmDOmRd6-5Z3SnA_2BNEIS9dUp9_dI=" width="100%" height="400" alt="">
+      <div class="carousel-caption d-none d-md-block">
+        <p>“Let food be thy medicine, thy medicine shall be thy food.”</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://tinybeans.com/wp-content/uploads/2022/03/toddler-eating-mac-istock.jpg" width="100%" height="400" alt="">
+      <div class="carousel-caption d-none d-md-block">
+        <p>“The first wealth is health.”</p>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+
+<!-- Slides -->
+
+<!-- Footer-->
+
+
+
+<div class="credits">Created by <span> Vuddamari Manisha</span> | all rights reserved</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
